@@ -41,7 +41,7 @@ public class PersonnelRepositoryTest {
 
         List<Personnel> list = personnelRepository.findAll();
 
-        assertTrue(list.size() > 0);
+        assertFalse(list.isEmpty());
     }
 
     @Test
