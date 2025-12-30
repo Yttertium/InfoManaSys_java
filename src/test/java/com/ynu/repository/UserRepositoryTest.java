@@ -1,16 +1,19 @@
-package com.ynu;
+package com.ynu.repository;
 
 import com.ynu.entity.User;
-import com.ynu.repository.UserRepository;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.transaction.annotation.Transactional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DataJpaTest
+@SpringBootTest
+@Transactional
 public class UserRepositoryTest {
-    @Resource
+    @Autowired
     private  UserRepository userRepository;
 
     @Test
